@@ -13,11 +13,11 @@ def main():
 	cars = init(F)
 	print(cars)
 	steps=0
-	while(steps < T) :
+	while(steps < int(T)) :
 		for car in cars:
 			for ride in already:
 				if feasable(car, ride):
-					goForRide()
+					goForRide(cars,already,car,ride)
 					steps+=1
 
 if __name__ == '__main__':
