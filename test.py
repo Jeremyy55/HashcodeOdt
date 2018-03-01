@@ -1,5 +1,6 @@
 from handleFile import *
 from forCar import *
+from ride import *
 def main():
 	damn = text2lines("data/a_example.in")
 	print(len(damn))
@@ -13,7 +14,11 @@ def main():
 	print(cars)
 	steps=0
 	while(steps < T) :
-
+		for car in cars:
+			for ride in already:
+				if feasable(car, ride):
+					goForRide()
+					steps+=1
 
 if __name__ == '__main__':
 	main()
