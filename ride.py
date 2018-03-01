@@ -7,19 +7,21 @@ def init(tab):
 	for i in range(int(tab)) :
 		car.append([0,0,0])
 	return car
+
 def feasable(car, ride):
 	move1=int( deplacement([int(car[0]),int(car[1])],[int(ride[0]),int(ride[1])]))
 	move2=int( deplacement([int(ride[0]),int(ride[1])],[int(ride[2]),int(ride[3])]))
 	if(car[2]+move1+move2)<int(ride[5]):
-			#+<
-
 		return True
 	else:
 		return False
+#def goForRide(cars,rides,car2modif,ride2delete):
+#	move1=int( deplacement([int(car[0]),int(car[1])],[int(ride[0]),int(ride[1])]))
+#	move2=int( deplacement([int(ride[0]),int(ride[1])],[int(ride[2]),int(ride[3])]))
+#	cars[car2modif]=cars[2]+ move1 + move2
+#	ride
 
-#def deplacement(tab):
-#	if feasable(tab):
-#		print("ok")
+
 def main():
 	damn = text2lines("data/a_example.in")
 	[R, C, F, N, B, T], already = extract1line(damn)
