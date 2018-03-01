@@ -24,7 +24,7 @@ def text2lines(filename):
 		print("line")
 		print(line)
 		print("line.split")
-		output.append(int(line.split()))
+		output.append(line.split())
 	return output
 
 def extract1line(tab):
