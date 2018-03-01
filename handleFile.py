@@ -28,5 +28,8 @@ def text2lines(filename):
 	return output
 
 def extract1line(tab):
+	firstLine=tab[0]
+	tab.remove(firstLine)
+	return firstLine
 
 	
