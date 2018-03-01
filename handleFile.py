@@ -13,3 +13,17 @@ def text2words(filename):
 			words.append(word)
 		print(words)
 	return words
+
+def text2lines(filename):
+	file=open(filename,"r")
+	lines=file.readlines()
+	print("lines")
+	print(lines)
+	output=[]
+	for line in lines:
+		print("line")
+		print(line)
+		print("line.split")
+		output.append(line.split())
+	return output
+	
