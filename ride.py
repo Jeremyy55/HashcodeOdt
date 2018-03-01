@@ -16,9 +16,10 @@ def feasable(car, ride):
 	else:
 		return False
 def goForRide(cars,rides,car2modif,ride2delete):
-	move1=int( deplacement([int(car2modif[0]),int(car2modif[1])],[int(ride2delete[0]),int(ride2delete[1])]))
+	car= cars.index(car2modif)
+	move1=int( deplacement([int(car[0]),int(car[1])],[int(ride2delete[0]),int(ride2delete[1])]))
 	move2=int( deplacement([int(ride2delete[0]),int(ride2delete[1])],[int(ride2delete[2]),int(ride2delete[3])]))
-	cars[car2modif]=cars[car2modif]+ move1 + move2
+	cars[car]=cars[car]+ move1 + move2
 	rides.remove(ride2delete)
 	return cars, rides
 
