@@ -3,7 +3,7 @@ from handleFile import *
 
 def calculGauth(tab):
 	for line in tab:
-		if abs(line[2]-line[0])+abs(line[3]-line[1])<line[5]:
+		if abs(int(line[2])-int(line[0]))+abs(int(line[3])-int(line[1]))<int(line[5]):
 			print("ok")
 		else:
 			print("Dommage")
