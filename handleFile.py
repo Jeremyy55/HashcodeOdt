@@ -30,6 +30,6 @@ def text2lines(filename):
 def extract1line(tab):
 	firstLine=tab[0]
 	tab.remove(firstLine)
-	return firstLine
+	return firstLine,tab
 
 	
